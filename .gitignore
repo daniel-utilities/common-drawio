@@ -1,0 +1,108 @@
+#===============================================================================
+# .gitignore
+#
+# Exclude specific files, filetypes, directories from Git tracking.
+#
+# Documentation:
+#   https://git-scm.com/docs/gitignore
+#
+# Sources:
+#   https://github.com/github/gitignore/
+#
+#===============================================================================
+
+
+#-------------------------------------------------------------------------------
+#  UPSTREAM: daniel-templates/template-project
+#-------------------------------------------------------------------------------
+
+# Files can be excluded by giving them the ".local" extension
+*.local
+*.local.*
+
+# Auto-generated VS Code files
+**/.vscode/*
+**/.history/*
+*.vsix
+
+# Folder settings file is generated automatically from extension: "franmastromarino.vs-code-settings-os"
+.vscode/settings.json
+
+# Keep other project-specific settings
+!.vscode/*.code-snippets
+!.vscode/settings.all.json
+!.vscode/settings.windows.json
+!.vscode/settings.macos.json
+!.vscode/settings.linux.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# Log files
+**/log/*
+**/logs/*
+*.log
+
+# Build files
+**/build/*
+
+# Temporary files
+**/temp/*
+**/tmp/*
+*.temp
+*.tmp
+*.bak
+*.bkp
+*.swp
+*~
+.nfs*
+.fuse_hidden*
+*.stackdump
+*.vim
+*.viminfo
+
+# Other filetypes
+**/.svn/*
+**/.hg/*
+**/.CVS/*
+**/.DS_Store/*
+**/$RECYCLE.BIN/*
+.Trash-*
+*.lnk
+Thumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+.directory
+
+
+#-------------------------------------------------------------------------------
+#  UPSTREAM: CURRENT PROJECT
+#-------------------------------------------------------------------------------
+
+
+
+
+#===============================================================================
+# GLOBAL EXCEPTIONS
+# If a file is excluded via one of the previous rules, it can be added back
+# here at the end of the file by prefixing the rule with "!".
+#===============================================================================
+
+#-------------------------------------------------------------------------------
+#  UPSTREAM: daniel-templates/template-project
+#-------------------------------------------------------------------------------
+
+# Place a ".gitkeep" inside a folder to make sure it is always tracked by Git.
+!.gitkeep
+
+
+#-------------------------------------------------------------------------------
+#  UPSTREAM: CURRENT PROJECT
+#-------------------------------------------------------------------------------
+
+
+
