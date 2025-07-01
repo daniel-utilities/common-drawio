@@ -35,8 +35,7 @@
     ```
 
 01. Open your Draw.IO/Diagrams.net app.
-    Go to ```File --> Open Library``` and navigate to the ```common-drawio/src/{LIBRARY}.xml```.
-
+    Go to ```File --> Open Library``` and navigate to ```common-drawio/lib/{LIBRARY}.xml```.
 
 
 ### As a Git Submodule in an existing project
@@ -50,38 +49,66 @@
     ```
 
 01. Add the following line to ```.gitconfig``` to ensure ```git pull``` pulls
-    changes to submodules as well:
+    changes to submodules:
 
     ```
     submodule.recurse = true
     ```
 
+01. Add to ```.gitignore```:
+
+    ```
+    *.bkp
+    ```
+
+01. Add to ```.gitattributes```:
+
+    ```
+    *.drawio text diff
+    *.svg    text diff
+    *.xml    text diff
+    ```
+
+01. Commit changes:
+
+    ```
+    git commit -am "Added submodule: daniel-utilities/common-drawio"
+    ```
+
+01. Open your Draw.IO/Diagrams.net app.
+    Go to ```File --> Open Library``` and navigate to ```{projectpath}/lib/common-drawio/lib/{LIBRARY}.xml```.
+
+
 ### VSCode Integration
 
-01. Add the following lines to your project's ```.vscode/settings.json```:
-
-    ```
-    "hediet.vscode-drawio.offline": true,
-    "hediet.vscode-drawio.codeLinkActivated": true,
-    "hediet.vscode-drawio.globalVars": {},
-    "hediet.vscode-drawio.plugins": [],
-    "hediet.vscode-drawio.knownPlugins": [],
-    "hediet.vscode-drawio.customLibraries": [],
-    "hediet.vscode-drawio.appearance": "automatic",
-    "hediet.vscode-drawio.customColorSchemes": [],
-    "hediet.vscode-drawio.customFonts": [],
-    "hediet.vscode-drawio.theme": "automatic",
-    ```
-
-01. In ```.vscode/extensions.json```:
+01. Add the following lines to your project's ```.vscode/extensions.json```,
+    then ensure the exensions are downloaded and installed:
 
     ```
     "recommendations": [
-        "hediet.vscode-drawio"
+        "hediet.vscode-drawio",
+        "jock.svg",
+        "redhat.vscode-xml",
+        ...
     ]
     ```
 
-    Then ensure the extension is downloaded and installed.
+01. In ```.vscode/settings.json```:
+
+    ```
+    "svg.preview.autoShow": true,
+    "hediet.vscode-drawio.offline": true,
+    "hediet.vscode-drawio.codeLinkActivated": false,
+    "hediet.vscode-drawio.theme": "kennedy",
+    "hediet.vscode-drawio.appearance": "automatic",
+    "hediet.vscode-drawio.customLibraries": [
+        {
+            "file": "${workspaceFolder}/lib/common-drawio/lib/general.xml",
+            "libName": "common-drawio:general",
+            "entryId": "common-drawio:general"
+        },
+    ],
+    ```
 
 
 

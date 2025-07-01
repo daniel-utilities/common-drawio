@@ -62,5 +62,101 @@
 
 		},
 
+		//======================================================================
+		// Draw.IO Integration
+		// (Extension does not respond to changes in "settings.json")
+		//======================================================================
+		"hediet.vscode-drawio.offline": true,
+		"hediet.vscode-drawio.codeLinkActivated": false,
+		"hediet.vscode-drawio.theme": "kennedy",
+		"hediet.vscode-drawio.appearance": "automatic",
+
+		// Draw.IO Shape Libraries
+		//	Adds additional subcategories to the Shapes menu.
+		//	Libraries must be individually enabled using the "+ More Shapes" button.
+		//
+		//	"hediet.vscode-drawio.customLibraries": [
+		//		{
+		//			"libName": "common-drawio:System Components",
+		//			"file": "${workspaceFolder}/lib/system-components.xml",
+		//			"entryId": "common-drawio.system-components",
+		//		},
+		//	],
+		"hediet.vscode-drawio.customLibraries": [
+			{
+				"libName": "System Components",
+				"file": "${workspaceFolder}/lib/system-components.xml",
+				"entryId": "system-components",
+			},
+		],
+
+		// Draw.IO Color Schemes
+		//	Define up to 6 custom schemes.
+		//	Selectable on first page of Styles palette.
+		//	Line color is specified by "stroke" property.
+		//	Lightmode color, auto darkmode:		"#lightcolor"
+		//	Lightmode color, darkmode color:	"light-dark(#lightcolor,#darkcolor)"
+		//
+		//	"hediet.vscode-drawio.customColorSchemes": [[
+		//		{
+		//			"title": 	"My Color Scheme",
+		//			"fill":		"light-dark(#ffdfba,#513616)",
+		//			"stroke":	"#888888",
+		//			"gradient":	"light-dark(#513616,#ffdfba)",
+		//			"font":		"light-dark(#444444,#AAAAAA)"
+		//		},
+		//	]],
+		"hediet.vscode-drawio.customColorSchemes": [[
+			{
+				"title": 	"Systems: Blue (Top Level)",
+				"fill":		"light-dark(#C7D9FC,#263554)",
+				"stroke":	"light-dark(#8BA1FC,#4D60AF)",
+				"font":		"light-dark(#000000,#FFFFFF)"
+			},
+			{
+				"title": 	"Systems: Blue (Subcomponent)",
+				"fill":		"light-dark(#FFFFFF,#000000)",
+				"stroke":	"light-dark(#8BA1FC,#4D60AF)",
+				"font":		"light-dark(#101010,#EDEDED)"
+			},
+			{
+				"title": 	"Systems: Green (Top Level)",
+				"fill":		"light-dark(#5A9353,#5B8C55)",
+				"stroke":	"light-dark(#3E663A,#86A983)",
+				"font":		"light-dark(#000000,#FFFFFF)"
+			},
+			{
+				"title": 	"Systems: Green (Subcomponent)",
+				"fill":		"light-dark(#FFFFFF,#000000)",
+				"stroke":	"light-dark(#3E663A,#86A983)",
+				"font":		"light-dark(#101010,#EDEDED)"
+			},
+			{
+				"title": 	"Systems: Orange (Top Level)",
+				"fill":		"light-dark(#FF7C56,#C95838)",
+				"stroke":	"light-dark(#F03F13,#FF7C56)",
+				"font":		"light-dark(#000000,#FFFFFF)"
+			},
+			{
+				"title": 	"Systems: Orange (Subcomponent)",
+				"fill":		"light-dark(#FFFFFF,#000000)",
+				"stroke":	"light-dark(#F03F13,#FF7C56)",
+				"font":		"light-dark(#101010,#EDEDED)"
+			},
+		]],
+
+		// Draw.IO Color Picker Presets
+		// 	Appear for selection at start of color picker.
+		// 	Extension does not support "light-dark(...)" here.
+		//
+		//	"hediet.vscode-drawio.presetColors": [
+		//		"f79862", "f05e23", "be5504", "d7722c", "cb5c0d", "b3672c"
+		//	],
+		"hediet.vscode-drawio.presetColors": [
+			"000000", "FFFFFF", "101010", "EDEDED",
+			"C7D9FC", "263554", "8BA1FC", "4D60AF",
+			"5A9353", "5B8C55", "3E663A", "86A983",
+			"FF7C56", "C95838", "F03F13", "FF7C56",
+		],
 	},
 }

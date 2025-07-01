@@ -6,10 +6,10 @@
         "timonwong.shellcheck",
         "DavidAnson.vscode-markdownlint",
         "tomoki1207.pdf",
+        "ZainChen.json",
+        "redhat.vscode-yaml",
         "jock.svg",
         "redhat.vscode-xml",
-        "redhat.vscode-yaml",
-        "ZainChen.json",
         "hediet.vscode-drawio",
     ]
 }
